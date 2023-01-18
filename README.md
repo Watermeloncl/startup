@@ -1,4 +1,4 @@
 # startup
 Hello world!
 General Kenobi!
-Bananas
+Apples and Bananas.
