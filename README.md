@@ -11,6 +11,10 @@ Useful for navigating to different pages
 
 Using SVG:
 (M move <to x,y>, Q quadratic curve <control point x,y> <to x,y>)  
+
+```
 <path d="M 95,5 95,95 5,95 Q 5,5 95,5" fill="green" />  
+```
+
 Removing from accessibility searches  
 aria-hidden="true"  
