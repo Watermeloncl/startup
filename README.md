@@ -6,7 +6,11 @@ So far, this repository is entirely practice for using GitHub.  For this assignm
 
 #### Simon-HTML Assignment, due 2/8
 Linking different files  
+
+```
 <tag><a href="index.html">Home</a></tag>  
+```
+
 Useful for navigating to different pages  
 
 Using SVG:
