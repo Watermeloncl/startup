@@ -43,7 +43,7 @@ Adding Bootstrap
 
 Options:
 flex-direction: row | row-reverse | column | column-reverse  
-align-items: normal | stretch | <baseline-position> | <overflow-position> | <self-position>  
+align-items: center | stretch | flex-start | flex-end | baseline 
 justify-content: normal | flex-end | flex-start | space-between | space-around  
 Learning more about flex: <a href="https://flexboxfroggy.com/">Home</a>  
 Learning more about grid: <a href="https://cssgridgarden.com/">Home</a>  
