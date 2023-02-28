@@ -49,23 +49,23 @@ Learning more about flex: <a href="https://flexboxfroggy.com/">Home</a>
 Learning more about grid: <a href="https://cssgridgarden.com/">Home</a>  
 
 #### Simon-JavaScript Assignment, due 3/6
-Adding JavaScript in (consider putting it at the end if it references HTML during initialization to avoid collision and something being accessed before initialization)
+Adding JavaScript in (consider putting it at the end if it references HTML during initialization to avoid collision and something being accessed before initialization)  
 
 ```
 <script src="play.js"></script>
 ```
 
-Math.floor always rounds down
-Math.round rounds regularly
+Math.floor always rounds down  
+Math.round rounds regularly  
 
-localStorage can be accessed anywhere using setItem or getItem
-Use unique ID's when storing in localStorage to avoid overwriting previous data
+localStorage can be accessed anywhere using setItem or getItem  
+Use unique ID's when storing in localStorage to avoid overwriting previous data  
 
-splice() inserts into an array, using splice(index, [numOfEntriesToDelete], [newValue], [...otherNewValues])
-JSON.parse() to turn from JSON to String
-JSON.stringify() to turn from String to JSON
+splice() inserts into an array, using splice(index, [numOfEntriesToDelete], [newValue], [...otherNewValues])  
+JSON.parse() to turn from JSON to String  
+JSON.stringify() to turn from String to JSON  
 
-creating a date as a String according to local time can be done through new Date().toLocaleDateString()
+creating a date as a String according to local time can be done through new Date().toLocaleDateString()  
 
-Great ForEach loop
-for(const [index, value] of structure.entries())   (structure is name of the array or other)
+Great ForEach loop  
+for(const [index, value] of structure.entries())   (structure is name of the array or other)  
