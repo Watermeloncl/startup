@@ -69,3 +69,20 @@ creating a date as a String according to local time can be done through new Date
 
 Great ForEach loop  
 for(const [index, value] of structure.entries())   (structure is name of the array or other)  
+
+
+#### JavaScript Deliverable
+timerVariable = setInterval(function, milliseconds)  
+clearInterval(timerVariable)  
+  
+document.querySelector("#id").textContent DOESN'T call document parser  
+pause intervals for intense computationally expensive calculations  
+arrayName.length = 0 to empty array  
+  
+const elementName = document.createElement("elementType"); to create element  
+elementName.className = classNameToChangeTo  
+elementName.id = idNameToChangeTo  
+  
+for (const [i, item] of Items.entries()), i for index, item for actual value (or object), Items for structure  
+No pass by reference! (No explicit pointers :( Unless you wrap in an object and parse before using.)  
+Use more global constants and more functions with parameters next time instead of global variables (good thing it's single threaded, huh? Oh wait no it's super slow haha)  
