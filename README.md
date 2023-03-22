@@ -86,3 +86,36 @@ elementName.id = idNameToChangeTo
 for (const [i, item] of Items.entries()), i for index, item for actual value (or object), Items for structure  
 No pass by reference! (No explicit pointers :( Unless you wrap in an object and parse before using.)  
 Use more global constants and more functions with parameters next time instead of global variables (good thing it's single threaded, huh? Oh wait no it's super slow haha)  
+  
+#### Simon Service  
+app.listen is the equivelant of linux command listen()  
+Fetching json:  
+  
+```  
+const response = await fetch('/api/scores');  
+scores = await response.json();  
+```  
+  
+Router:  
+  
+```  
+var apiRouter = express.Router();  
+app.use(`/api`, apiRouter);  
+```  
+  
+Get:  
+  
+```  
+apiRouter.get('/scores', (_req, res) => {  
+  res.send(scores);  
+});  
+```  
+  
+Post:  
+  
+```  
+apiRouter.post('/score', (req, res) => {  
+  scores = updateScores(req.body, scores);  
+  res.send(scores);  
+});  
+```  
