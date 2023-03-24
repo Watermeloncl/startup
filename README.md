@@ -119,3 +119,45 @@ apiRouter.post('/score', (req, res) => {
   res.send(scores);  
 });  
 ```  
+  
+#### Mongo DB  
+Checking environment Variables  
+const variableName = process.env.ENVNAME;  
+  
+Creating Mongo Client  
+  
+```  
+const client = new MongoClient(url);  
+const scoreCollection = client.db('dbName').collection('collectionName');  
+```  
+  
+Post Request:  
+  
+```  
+const response = await fetch('/api/score', {  
+  method: 'POST',  
+  headers: { 'content-type': 'application/json' },  
+  body: JSON.stringify(newScore),  
+});  
+  
+/*and*/  
+  
+apiRouter.post('/score', async (req, res) => {  
+  DB.addScore(req.body);  
+  const scores = await DB.getHighScores();  
+  res.send(scores);  
+});  
+  
+/*and*/  
+  
+function getHighScores() {  
+  const query = {score: {$gt: 0}};  
+  const options = {  
+    sort: {score: -1},  
+    limit: 10,  
+  };  
+  const cursor = scoreCollection.find(query, options);  
+  return cursor.toArray();  
+}  
+```  
+  
