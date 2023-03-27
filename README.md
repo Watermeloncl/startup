@@ -120,7 +120,7 @@ apiRouter.post('/score', (req, res) => {
 });  
 ```  
   
-#### Mongo DB  
+#### Simon DB  
 Checking environment Variables  
 const variableName = process.env.ENVNAME;  
   
@@ -161,3 +161,21 @@ function getHighScores() {
 }  
 ```  
   
+#### Simon Login  
+Secure API Requests (replacing api requests):  
+  
+```  
+secureApiRouter.get('/scores', async (req, res) => {  
+  const scores = await DB.getHighScores();  
+  res.send(scores);  
+});  
+```  
+  
+Remember to send 401 (unauthorized) code regardless of whether user exists or not, so as to not alert the inputter that the user does or does not exist.  
+404 Code for File does not exist  
+204 Code for request succeeded but no need to navigate away from page  
+500 Code for server error  
+AuthCodes:  
+- secure: use https only  
+- httpOnly: for disallowing javascript on the server from manipulating the request/response  
+- sameSite: Only allow to be read from the creator's domain  
