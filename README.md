@@ -179,3 +179,21 @@ AuthCodes:
 - secure: use https only  
 - httpOnly: for disallowing javascript on the server from manipulating the request/response  
 - sameSite: Only allow to be read from the creator's domain  
+  
+#### Simon WebSocket  
+For keeping track of connections, remember to include at least ID, alive-status, and type of connection in the object  
+ws.on('message' vs. ws.on('close' is whether server received a message or end of file  
+Remember to Ping and Pong to keep connections alive. 10 seconds is a good amount  
+  
+Upgrading:  
+  
+```  
+httpServer.on('upgrade', (request, socket, head) => {  
+      wss.handleUpgrade(request, socket, head, function done(ws) {  
+            wss.emit('connection', ws, request);  
+      });  
+});  
+```  
+  
+Remember to configure socket with this.socket and new WebSocket, which requires URL  
+  
