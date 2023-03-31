@@ -197,3 +197,22 @@ httpServer.on('upgrade', (request, socket, head) => {
   
 Remember to configure socket with this.socket and new WebSocket, which requires URL  
   
+#### Service Deliverable  
+wss.on('connection' is per connection  
+ws.on() doesn't have access to other connections  
+parse, and restringify JSON to manipulate messages with the server  
+  
+Setting up websocket:  
+  
+```  
+const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';  
+socket = new WebSocket(`${protocol}://${window.location.host}/ws`);  
+```  
+  
+Great Function for sending objects as messages:  
+  
+```  
+sendEvent(null, 'update', playerName, level, timeScore + (STARTING_TIME - timeLeft));  
+```  
+  
+  
