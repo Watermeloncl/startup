@@ -215,4 +215,22 @@ Great Function for sending objects as messages:
 sendEvent(null, 'update', playerName, level, timeScore + (STARTING_TIME - timeLeft));  
 ```  
   
+#### Simon React  
+Remember to npm install create-react-app!  
+Consider using imports such as the following the break up files:  
+  
+```  
+import { SimonGame } from './simonGame';  
+```  
+  
+Parts of a Navlink:  
+  
+```  
+<NavLink className='nav-link' to='about'>About</NavLink>  
+<Route path='/about' element={<About />} />  
+```  
+  
+React avoids Reflow overload by only rerendering per change. Each change takes 16 milliseconds  
+Create timers to make sure you don't overload the 14 second buffer  
+Check, Calculate, Store, Render  
   
